@@ -1,7 +1,13 @@
-<app-header></app-header>
+<!-- Splash Screen -->
+<app-splash *ngIf="!showContent"></app-splash>
 
-<main class="container min-h-screen mx-auto mt-16 px-4">
-  <router-outlet></router-outlet>
-</main>
+<!-- Main App Layout -->
+<ng-container *ngIf="showContent">
+  <app-header></app-header>
 
-<app-footer></app-footer>
+  <main class="container min-h-screen mx-auto mt-16 px-0">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
+</ng-container>

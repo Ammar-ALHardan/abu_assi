@@ -47,6 +47,16 @@ module.exports = {
         'custom-gradient': 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(9,9,121,1) 100%)',
         'custom-gradient-rtl': 'linear-gradient(90deg,rgba(9,9,121,1) 0%, rgba(9,9,121,1) 35%, rgba(2,0,36,1)  100%)',
       },
+      keyframes: {
+        logoMove: {
+          '0%': { transform: 'translateX(100vw)', opacity: '0' },
+          '60%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'scale(1.1)' },
+        },
+      },
+      animation: {
+        'logo-move': 'logoMove 3s ease-in-out forwards',
+      },
     },
   },
 }
